@@ -4,7 +4,7 @@ import java.util.ArrayList;
 /**
 * Week 8 Day 15
 * 1. Code Flow
-* Sarah Connor
+* @author Sarah Connor
 */
 
 public class CodeFlow{
