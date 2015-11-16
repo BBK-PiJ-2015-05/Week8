@@ -21,7 +21,7 @@ public class PatientList{
 			newPatient = new Patient(name, birthYear);
 			patientList.add(newPatient);
 		}catch(IllegalArgumentException e){
-			System.out.println("ERROR was thrown " + e.getMessage());
+			System.out.println("ERROR was thrown: " + e.getMessage());
 		}
 	}
 }
