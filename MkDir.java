@@ -11,7 +11,7 @@ public class MkDir{
 	public static void main(String[] args){
 		
 		for(int i = 0; i < args.length; i++){
-			File file = new File(args[i]);
+			File file = new File("." + File.separator + args[i]);
 			file.mkdir();
 		}
 	}
