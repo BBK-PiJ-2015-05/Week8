@@ -11,9 +11,7 @@ public class Cp{
 		Cp launch = new Cp();
 		
 		if(args.length < 2){
-			System.out.println("Valid input: java Cp [file input] [file ouput]");
-			System.out.println("Valid input: java Cp [file input] ... [directory output]");
-			System.exit(0);
+			launch.error();
 		}
 		
 		File outFile = new File(args[args.length - 1]);
@@ -28,6 +26,8 @@ public class Cp{
 		}else if(args.length == 2){
 			File inFile = new File(args[0]);
 			launch.copyFile(inFile, outFile);
+		}else{
+			launch.error();
 		}
 		
 		
@@ -55,5 +55,12 @@ public class Cp{
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
+	}
+	
+	public void error(){
+		System.out.println("Invalid arguments");
+		System.out.println("Valid input: java Cp [file input] [file ouput]");
+		System.out.println("Valid input: java Cp [file input] ... [directory output]");
+		System.exit(0);
 	}
 }
